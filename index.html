@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>IMControllers - INDEX</title>
+    <meta charset="UTF-8">
+    <meta name="title" content="imcontrollersweb">
+    <meta name="description" content="prototipo001web">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Public/fwork/internal/css_index/estilo_index.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Public/fwork/internal/Img/logo/arclogo.ico" />
+</head>
+
+<body>
+    <div class="login-wrap">
+        <div class="image_logo">
+            <img src="Public/fwork/internal/Img/logo/arclogo.png" alt="" srcset="">
+        </div><br>
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Recover User</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <form class="group login100-form validate-form " method="POST" action="Controllers/Queries/AuthUsuario.php">
+                        <label class="label" for="arg_numId">No. Identificación</label>
+                        <input id="arg_numId" class="input" type="text" name="arg_numId" value="" autocomplete="off" placeholder=""><br>
+                        <label class="label" for="arg_psw">Contraseña</label>
+                        <input id="arg_psw" class="input" type="password" name="arg_psw" value="" autocomplete="off" placeholder="*******"><br>
+                        <input class="button" type="submit" value="INGRESAR"><br>
+                    </form>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <label for="tab-1">Created By: ISE engineering group @2020</a>
+					</div>
+				</div>
+					
+                <div class="sign-up-htm">
+                    <form  class="group login100-form validate-form " method="POST" action="Controllers/SQL/RecuperarUsuario.php" >
+                    <label class="label" for="arg_numId">No. Identificación</label>
+                        <input id="arg_numId" class="input" type="text" name="arg_numId" value="" autocomplete="off" placeholder=""><br>
+                        <label class="label" for="arg_email">Dirección de correo</label>
+                        <input id="arg_email" class="input " type="email" name="arg_email" value="" autocomplete="off" placeholder="example@email.com"><br>
+                        <input class="button" type="submit" value="SOLICITAR"><br>
+                        </form>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <label for="tab-1">Created By: ISE engineering group @2020</a>
+                    </div>
+                </div>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="Public/fwork/internal/js_index/config.js"></script>
+	</body>
+</html>

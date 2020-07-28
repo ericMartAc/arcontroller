@@ -1,0 +1,131 @@
+<ul class="navbar-nav bg_arc_blue sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="main.php">
+        <div class="sidebar-brand-icon">
+            <img id="sidebar_brand_icon_img" src="../Public/fwork/internal/Img/logo/arclogo8.png" alt="" srcset="">
+        </div>
+    </a>
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading operacion -->
+    <div class="sidebar-heading">
+        Operación
+    </div>
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="main.php">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+    </li>
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-hard-hat"></i>
+            <span>Programación</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-warning py-2 collapse-inner rounded">
+                <a class="collapse-item text-primary" href="#"><i class="fas fa-fw fa-project-diagram" ></i> Plan de tareas</a>
+                <!--genera un orden de trabajo, se debe seleccionar el cliente, similar al formato de gestion de operaciones-->
+                <a class="collapse-item text-primary" href="#"><i class="fas fa-fw fa-network-wired"></i> Gestión</a>
+                <!--dar gestión a las operaciones por cliente y referncia de contrato o sede: ejecución de la gestion, RQ, correos, cotizaciones, todo en cuanto se pueda -->
+                <a class="collapse-item text-primary" href="#"><i class="fas fa-fw fa-list-ol"></i> Pendientes</a>
+                <!--todo en estado pendiente por facturar, lista por cliente, por referncia del contrato o sede, por orden alfabetico-->
+                <a class="collapse-item text-primary" href="#"><i class="fas fa-fw fa-chart-pie"></i> Presupuesto</a>
+                <!--relación y estado financiero por sede interna, rel y est financ por cliente, por sede o ref de contrato-->
+
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Utilidades</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-warning py-2 collapse-inner rounded">
+                <a class="collapse-item text-primary" href="#"><i class="fas fa-fw fa-qrcode"></i>Escanear código</a>
+                <a class="collapse-item text-primary" href="#"><i class="fas fa-fw fa-envelope" ></i>Correos</a>
+                <a class="collapse-item text-primary" href="#"><i class="fab fa-fw fa-readme"></i>Documentación</a>
+                <a class="collapse-item text-primary" href="#"><i class="fab fa-fw fa-android"></i>Sistemas</a>
+                <a class="collapse-item text-primary" href="#"><i class="fas fa-fw fa-clipboard-list"></i>Inventarios</a>
+                <a class="collapse-item text-primary" href="#"><i class="fab fa-fw fa-raspberry-pi"></i>IIot</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading admin-->
+    <div class="sidebar-heading">
+        Administración
+    </div>
+
+    <!-- Nav Item - Contabilidad Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCont" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Contabilidad</span>
+        </a>
+        <div id="collapseCont" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Gastos:</h6>
+                <a class="collapse-item" href="#">Nomina</a>
+                <a class="collapse-item" href="#">Pagos</a>
+                <a class="collapse-item" href="#">otro</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Ingresos:</h6>
+                <a class="collapse-item" href="#">Contratos</a>
+                <a class="collapse-item" href="#">otros</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Base de datos Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Base de datos</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Personas:</h6>
+                <a class="collapse-item" href="#" onclick="mostrarClientes()">Clientes</a>
+                <a class="collapse-item" href="#" onclick="mostrarRRHH()">RRHH</a>
+                <a class="collapse-item" href="#" onclick="mostrarTerceros()">Terceros</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Registros:</h6>
+                <a class="collapse-item" href="#" onclick="mostrarDoc()">Documentos</a>
+                <a class="collapse-item" href="#" onclick="mostrarHistorial()">Historiales</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Charts -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Charts</span></a>
+    </li>
+
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Tables</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+</ul>
